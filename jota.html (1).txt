@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Surprise Quiz</h1>
+    <div class="question">
+        <p>What is the capital of France?</p>
+        <div class="options">
+            <button onclick="checkAnswer('A')">A) Berlin</button>
+            <button onclick="checkAnswer('B')">B) Madrid</button>
+            <button onclick="checkAnswer('C')">C) Paris</button>
+            <button onclick="checkAnswer('D')">D) Rome</button>
+        </div>
+    </div>
+    <p id="result"></p>
+    <script>
+        function checkAnswer(answer) {
+            const result = document.getElementById('result');
+            if (answer === 'C') {
+                result.textContent = 'Correct! 🎉';
+            } else {
+                result.textContent = 'Oops! Try again.';
+            }
+        }
+    </script>
+</body>
+</html>
